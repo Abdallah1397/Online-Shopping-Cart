@@ -1,0 +1,4 @@
+export default{
+    SET_PRODUCTS:'SET_PRODUCTS',
+    SELECT_PRODUCT:'SELECT_PRODUCT',
+}
