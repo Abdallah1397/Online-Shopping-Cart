@@ -9,18 +9,24 @@ import {
   Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+
 import { Link } from "react-router-dom";
 import { Drawer } from "@material-ui/core";
 
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
+
 import RemoveShoppingCartIcon from "@material-ui/icons/RemoveShoppingCart";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+
 import { GetTotalLength, GetTotalLikesLength } from "../../utils/helpers";
 import LikesDrawer from "../Drawer/likesdrawer";
+
 import CartDrawer from "../Drawer/cartDrawer";
+
 // makeStyles
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -39,6 +45,12 @@ const useStyle = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    '& #link':{
+      color:'#fff',
+      textDecoration:'none',
+      fontFamily:'cursive',
+    },
+    
   },
 
   // for the the responsive
@@ -99,8 +111,9 @@ const Navbar = () => {
       <AppBar className={classes.navbar}>
         <Toolbar>
           {/* Logo */}
+
           <Typography variant="h5" className={classes.title}>
-            Products
+            <a href='/' id="link">Products</a>
           </Typography>
           {/* Desktop Display */}
           <div className={classes.sectionDesktop}>
@@ -124,8 +137,11 @@ const Navbar = () => {
             </Drawer>
 
             {/* Cart Section */}
-            <IconButton color="inherit" aria-label="show the cart number"
-             onClick={toggleCartDrawer("right", true)}>
+            <IconButton
+              color="inherit"
+              aria-label="show the cart number"
+              onClick={toggleCartDrawer("right", true)}
+            >
               <Badge badgeContent={length} color="secondary">
                 <AddShoppingCartIcon />
               </Badge>
@@ -138,7 +154,7 @@ const Navbar = () => {
               // If true, the drawer is open.
               onClose={toggleCartDrawer("right", false)}
             >
-              <CartDrawer/>
+              <CartDrawer />
             </Drawer>
           </div>
 

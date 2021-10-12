@@ -6,6 +6,7 @@ const INITIAL_STATE={
 
 export default function cartReducer(state=INITIAL_STATE,actions){
     const {type,payload}=actions;
+    
     switch(type){
         case Types.ADD_TO_CART:
             // to show the item already exists in the cart

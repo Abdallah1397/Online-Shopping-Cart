@@ -44,8 +44,8 @@ const CartDrawer = () => {
 
           return (
             <div className={classes.drawerItem} key={item.id}>
-              <img src={item.image} width="80px" />
-              <h5>{item.title}</h5>
+              <img src={item.image} width="200px" />
+              {/* <h5>{item.title}</h5> */}
               <h6>
                 {item.price} * {item.qty} = {item.price * item.qty} LE
               </h6>

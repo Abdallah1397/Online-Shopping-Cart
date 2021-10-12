@@ -17,7 +17,7 @@ const Footer=()=>{
     return(
         <Container className={classes.root}>
             <Typography variant='h6' className={classes.title}>
-               Books  &copy; {new Date().getFullYear()}. All Rights Reserved
+               Products  &copy; {new Date().getFullYear()}. All Rights Reserved
             </Typography>
         </Container>
     )
