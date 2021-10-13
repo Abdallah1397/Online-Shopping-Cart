@@ -41,7 +41,7 @@ const LikesDrawer = () => {
         if (item !== 0) {
           return (
             <div className={classes.drawerItem}>
-              <img src={item.image} width="80px" />
+              <img src={item.image} width="200px" />
               <h6>{item.title}</h6>
               <IconButton onClick={()=>{dispatch(removeLikes(item.id))}}>
                 <DeleteIcon />

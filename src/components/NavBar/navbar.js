@@ -113,7 +113,7 @@ const Navbar = () => {
           {/* Logo */}
 
           <Typography variant="h5" className={classes.title}>
-            <a href='/' id="link">Products</a>
+            <Link exat to='/' id="link">Products</Link>
           </Typography>
           {/* Desktop Display */}
           <div className={classes.sectionDesktop}>
